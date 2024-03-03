@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="treehouseicon.jpg" type="image/x-icon" />
+    <title>Academic Tree House</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .countdown {
+            margin-top: 20px;
+            color: #777;
+            font-size: 1.2em;
+        }
+
+        .intro_text{
+            font-size: 50px;
+        }
+
+        .green_text{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="treehouse.jpg" alt="" width="400px" height="400px">
+    <h1 class= "intro_text">  <span class="green_text">Academic</span> TreeHouse</h1>
+    <h1 style="padding: 10px;">Exciting Things Are Coming Soon!</h1>
+    <p style="padding: 5px;">We are working hard to bring you an amazing website. Stay tuned for updates.</p>
+
+    <!-- Add your countdown timer here -->
+    <div class="countdown" id="countdown">Launching in: <span id="timer"></span></div>
+</div>
+
+<script>
+    // Add your countdown script here
+    // Example using JavaScript:
+    // Set the launch date (year, month (0-11), day, hour, minute, second)
+    const launchDate = new Date(2024, 2, 5, 12, 0, 0);
+
+    function updateCountdown() {
+        const currentDate = new Date();
+        const timeDifference = launchDate - currentDate;
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        // Optionally, you can redirect the user when the countdown reaches zero
+        if (timeDifference <= 0) {
+            window.location.href = "your_final_website_url";
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Call it once to avoid initial delay
+</script>
+
+</body>
+</html>

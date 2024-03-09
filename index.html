@@ -61,7 +61,7 @@
     // Add your countdown script here
     // Example using JavaScript:
     // Set the launch date (year, month (0-11), day, hour, minute, second)
-    const launchDate = new Date(2024, 2, 5, 12, 0, 0);
+    const launchDate = new Date(2024, 2, 9, 18, 0, 0);
 
     function updateCountdown() {
         const currentDate = new Date();
@@ -76,7 +76,7 @@
 
         // Optionally, you can redirect the user when the countdown reaches zero
         if (timeDifference <= 0) {
-            window.location.href = "your_final_website_url";
+            window.location.href = window.location.href;
         }
     }
 

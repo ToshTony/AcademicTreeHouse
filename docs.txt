@@ -1,0 +1,52 @@
+Website Structure and Features
+Homepage:
+
+A welcoming landing page introducing the services.
+Hero section with a captivating image and a clear call-to-action (CTA) button.
+Brief overview of services offered.
+Testimonials or reviews section.
+Services:
+
+Separate pages for "Academic Writing" and "CV Writing."
+Detailed descriptions of each service.
+Samples of previous work (if possible, with client permission).
+About Us:
+
+Information about the company, its mission, and values.
+Profiles of key team members, highlighting their expertise.
+Blog:
+
+Regularly updated blog with academic writing tips, CV writing advice, etc.
+Categories such as "Academic Writing Tips," "Career Advice," etc.
+Social sharing buttons for each blog post.
+Portfolio:
+
+Showcase of successful academic papers, CVs, cover letters, etc.
+Before-and-after examples for CV writing services.
+Pricing:
+
+Clear pricing packages for different services.
+Option for custom quotes based on specific requirements.
+Contact Us:
+
+Contact form for inquiries and orders.
+Email address, phone number, and physical address (if applicable).
+Links to social media profiles.
+
+
+
+
+
+
+Homepage
+About
+services
+blog
+contact
+
+
+chmod u+rw index.html
+
+first user(owner), second user (group)
+sudo chown user:user index.html
+

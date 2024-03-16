@@ -1,88 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="treehouseicon.jpg" type="image/x-icon" />
-    <title>Academic Tree House</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <title>AcademicTreeHouse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/treehouseicon.png" type="image/x-icon" />
 
-        .container {
-            max-width: 600px;
-        }
 
-        h1 {
-            color: #333;
-        }
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-        p {
-            color: #555;
-        }
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-        .countdown {
-            margin-top: 20px;
-            color: #777;
-            font-size: 1.2em;
-        }
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
-        .intro_text{
-            font-size: 50px;
-        }
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-        .green_text{
-            color: green;
-        }
-    </style>
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+
 </head>
-<body>
 
-<div class="container">
-    <img src="treehouse.jpg" alt="" width="400px" height="400px">
-    <h1 class= "intro_text">  <span class="green_text">Academic</span> TreeHouse</h1>
-    <h1 style="padding: 10px;">Exciting Things Are Coming Soon!</h1>
-    <p style="padding: 5px;">We are working hard to bring you an amazing website. Stay tuned for updates.</p>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-    <!-- Add your countdown timer here -->
-    <div class="countdown" id="countdown">Launching in T-Minus: <span id="timer"></span></div>
-</div>
+  <div class="site-wrap">
 
-<script>
-    // Add your countdown script here
-    // Example using JavaScript:
-    // Set the launch date (year, month (0-11), day, hour, minute, second)
-    const launchDate = new Date(2024, 2, 9, 18, 0, 0);
+    <div class="site-mobile-menu site-navbar-target">
 
-    function updateCountdown() {
-        const currentDate = new Date();
-        const timeDifference = launchDate - currentDate;
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
 
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+      <div class="site-mobile-menu-body"></div>
 
-        document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    </div>
 
-        // Optionally, you can redirect the user when the countdown reaches zero
-        if (timeDifference <= 0) {
-            window.location.href = window.location.href;
-        }
-    }
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown(); // Call it once to avoid initial delay
-</script>
+    <div class="py-2 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-9 d-none d-lg-block">
+            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Have a questions?</a> 
+            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span> +254 712 345 678</a> 
+            <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> info@academictreehouse.com</a> 
+          </div>
+          <div class="col-lg-3 text-right">
+            <!-- <a href="login.html" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
+            <a href="register.html" style="background-color: #6ba342;" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a> -->
+            <a href="#" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
+            <a href="#" style="background-color: #6ba342;" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="site-navbar py-2 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="index.html" class="d-block">
+              <img src="images/treehouselogocropped.png" width="250px" height="px" alt="Image" class="img-fluid">
+            </a>
+          </div>
+          <div class="mr-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active">
+                  <a href="index.html" class="nav-link text-left">Home</a>
+                </li>
+                <li class="has-children">
+                  <a href="#" class="nav-link text-left">About Us</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Academic Writing</a></li>
+                    <li><a href="#">CV writing</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-left">Services</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-left">Blog</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-left">Contact</a>
+                  </li>
+              </ul>                                                                                                                                                                                                                                                                                          </ul>
+            </nav>
+
+          </div>
+          <div class="ml-auto">
+            <div class="social-wrap">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+    </header>
+
+    
+    <div class="hero-slide owl-carousel site-blocks-cover">
+      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+              <h1>Academic TreeHouse</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+              <h1>You Can Write Anything</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div></div>
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-1 justify-content-center text-center">
+          <div class="col-lg-6 mb-1">
+            <h2 class="section-title-underline mb-5">
+              <span>Welcome to <h2 style="color:#6ba342; display: inline; font-size: 40px;">Academic</h2> TreeHouse</span>
+            </h2>
+            <p>Your Academic writing partner for success!</p>
+            <hr class="mb-5">
+            <p>
+              Your sanctuary for academic and professional excellence. From crafting impeccable research papers to polishing your CV,
+               our team is here to help you thrive in your scholarly and professional endeavors. Step into our treehouse and let's elevate 
+               your success together. Welcome aboard!
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-4 mb-5">
+            <h2 class="section-title-underline mb-5">
+              <span>Our Services</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-mortarboard text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>Academic Writing</h2>
+                <p>From essays and term papers to research articles and theses,
+                   we offer comprehensive academic writing services across various disciplines
+                </p>
+                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-school-material text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>CV Writing</h2>
+                <p>Stand out from the crowd with a professionally crafted CV.
+                   Our experts will highlight your skills, achievements, and experience.
+                </p>
+                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-library text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>Editing and Proofreading</h2>
+                <p>Ensure your work is polished to perfection.
+                   Our editors will review and refine your papers for clarity and accuracy.
+                  </p>
+                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+
+
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-6 mb-5">
+            <h2 class="section-title-underline mb-3">
+              <span>Our Blog</span>
+            </h2>
+            <p>Welcome to the vibrant heart of Academic Treehouse –
+               our blog section! Here, we delve into the latest trends, insights,
+                and tips in academia, research, and professional development. 
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+              <div class="owl-slide-3 owl-carousel">
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <a href="#"><img src="images/course_1.jpg" alt="Image" class="img-fluid"></a>
+                      <div class="price"></div>
+                      <div class="category"><h3>Academic</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>"Mastering the Art of Academic Writing: Tips and Tricks"</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Unlock the secrets to crafting compelling academic papers and making your voice heard in the scholarly arena.</p>
+                      <!-- <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Read More</a></p> -->
+                      <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                    </div>
+                  </div>
+      
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <a href="#"><img src="images/course_2.jpg" alt="Image" class="img-fluid"></a>
+                      <div class="price"></div>
+                      <div class="category"><h3>CV</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>"Navigating the Job Market Jungle: Strategies for Crafting an Impressive CV"</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Learn how to stand out from the crowd and showcase your
+                         skills effectively to potential employers.
+                      </p>
+                      <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                    </div>
+                  </div>
+      
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <a href="#"><img src="images/course_3.jpg" alt="Image" class="img-fluid"></a>
+                      <div class="price"></div>
+                      <div class="category"><h3>Reasearch</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>"Overcoming Writer's Block: Strategies to Reignite Your Creativity"</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Conquer writer's block and unleash your creativity with these proven tips and techniques..</p>
+                      <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                    </div>
+                  </div>
+
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                        <a href="#"><img src="images/course_4.jpg" alt="Image" class="img-fluid"></a>
+                      <div class="price"></div>
+                      <div class="category"><h3>Time Management</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>"Effective Time Management for Academics: Balancing Research, Teaching, and Life"</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Discover practical time management strategies to juggle the demands of academia while maintaining a healthy work-life balance.</p>
+                      <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                    </div>
+                  </div>
+      
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                        <a href="#"><img src="images/course_5.jpg" alt="Image" class="img-fluid"></a>
+                      <div class="price"></div>
+                      <div class="category"><h3>Review</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>"The Art of Peer Review: Navigating the Feedback Process with Confidence"</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Gain insights into the peer review process and learn how to provide constructive feedback and handle criticism like a pro..</p>
+                      <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                    </div>
+                  </div>
+      
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                        <a href="#"><img src="images/course_6.jpg" alt="Image" class="img-fluid"></a>
+                      <div class="price"></div>
+                      <div class="category"><h3>Data</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>"Harnessing the Power of Data Visualization: Tips for Creating Impactful Graphics"</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Learn how to effectively visualize your data to convey complex ideas and insights in a clear and compelling manner.</p>
+                      <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                    </div>
+                  </div>
+      
+              </div>
+      
+          </div>
+        </div>
+
+        
+        
+      </div>
+    </div>
+
+    
+
+
+    <div class="section-bg style-1" style="background-image: url('images/about_1.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline style-2">
+              <span>About Academic TreeHouse</span>
+            </h2>
+          </div>
+          <div class="col-lg-8">
+            <p class="lead">Welcome to Academic Treehouse, where scholarly pursuits flourish amidst a canopy
+               of expertise and support. At our digital oasis, we specialize in nurturing academic growth and professional
+                development through a range of tailored services and resources. From refining
+                 research papers to crafting compelling CVs, we're dedicated to empowering individuals
+                  to reach new heights in their educational and career endeavors. Our team of seasoned experts
+                   provides personalized guidance, offering insights, tips, and strategies to navigate the complexities
+                    of academia and the job market. Whether you're a student, researcher, or professional, Academic
+                     Treehouse is your haven for honing your skills, fostering intellectual curiosity, and building
+                      a solid foundation for success. Join us in this thriving community, where collaboration,
+                       innovation, and excellence intertwine to create boundless opportunities for growth and
+                        achievement. Welcome to the Academic Treehouse – where knowledge blossoms and dreams take flight.
+            </p>
+            <p><a href="about.html">Read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 05 - Block -->
+  <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline">
+              <span>Testimonials</span>
+            </h2>
+          </div>
+        </div>
+
+
+        <div class="owl-slide owl-carousel">
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="images/person_1.jpg" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>David M.</h3>
+                <span>Lecturer</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;Exceptional Service! Academic Tree House transformed my
+                 CV into a professional masterpiece. Their attention to detail
+                  and dedication to highlighting my achievements truly made a difference.
+                   Highly recommended!&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="images/person_4.jpg" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Sarah S.</h3>
+                <span>Architect</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;Academic Tree House is a game-changer! Their dedication to 
+                excellence and commitment to customer satisfaction shine through in their work. 
+                I'm impressed by the results and will definitely be a returning client!&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="images/person_3.jpg" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Mwaura J.</h3>
+                <span>Doctor</span>
+              </div>
+            </div>
+            <div>
+              <p>I was hesitant about using a CV writing service, but Academic Tree House blew me away. 
+                They captured my skills and experiences perfectly, creating a compelling CV that helped 
+                me land my dream job. Thank you for your professionalism!
+              </p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="images/person_2.jpg" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Alice M.</h3>
+                <span>PhD Student</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;If you're looking for top-notch academic writing services, 
+                look no further than Academic Tree House. Their team of experts not 
+                only delivers exceptional quality but also provides valuable insights 
+                to enhance your work. I'm extremely satisfied!&rdquo;
+              </p>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-mortarboard"></span>
+            <h3>Our Philosphy</h3>
+            <p>At Academic Treehouse, we believe in the transformative power of education and the boundless potential of every individual.
+               Our philosophy is rooted in the notion that learning is a lifelong journey, and that with the right guidance and support, 
+               anyone can achieve their academic and professional goals. We champion curiosity, critical thinking,
+                and a commitment to excellence as the cornerstones of intellectual growth and success.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-school-material"></span>
+            <h3>Academics Principle</h3>
+            <p>Our academic principles revolve around integrity, innovation, and inclusivity. We uphold the highest standards of academic integrity,
+               ensuring that all work is original, ethical, and rigorously researched. We embrace innovation, constantly seeking new ways
+                to enhance learning experiences and adapt to the evolving needs of our community.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-library"></span>
+            <h3>Key of Success</h3>
+            <p>
+              The keys to success at Academic Treehouse encompass a holistic approach to personal and 
+              professional development. We believe that success is not solely defined by accomplishments,
+               but by the journey of growth and self-discovery. Our keys to success emphasize passion, 
+               perseverance, preparation, collaboration, and adaptability.
+               Passion ignites the flame of motivation and fuels dedication to one's goals. 
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="news-updates">
+      <div class="container">
+         
+        <div class="row">
+          <div class="col-lg-9">
+             <div class="section-heading">
+              <h2 class="text-black">News &amp; Updates</h2>
+              <a href="#">Read All News</a>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="post-entry-big">
+                  <!-- <a href="news-single.html" class="img-link"><img src="images/blog_large_1.jpg" alt="Image" class="img-fluid"></a> -->
+                  <a href="#" class="img-link"><img src="images/blog_large_1.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta"> 
+                      <a href="#">June 6, 2023</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">ATS</a>, <a href="#">CV</a>
+                    </div>
+                    <!-- <h3 class="post-heading"><a href="news-single.html">New Applicant tracking system</a></h3> -->
+                    <h3 class="post-heading"><a href="#">New Applicant tracking system</a></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="post-entry-big horizontal d-flex mb-4">
+                  <a href="news-single.html" class="img-link mr-4"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">October 17, 2023</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Research Papers</a>, <a href="#">Updates</a>
+                    </div>
+                    <h3 class="post-heading"><a href="#">Evolution of Research</a></h3>
+                  </div>
+                </div>
+
+                <div class="post-entry-big horizontal d-flex mb-4">
+                  <a href="news-single.html" class="img-link mr-4"><img src="images/blog_2.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">January 6, 2024</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Software</a>, <a href="#">Dev</a>
+                    </div>
+                    <h3 class="post-heading"><a href="#">Creating a winning App</a></h3>
+                  </div>
+                </div>
+
+                <div class="post-entry-big horizontal d-flex mb-4">
+                  <a href="news-single.html" class="img-link mr-4"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">February 24, 2023</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Proposal</a>, <a href="#">Overview</a>
+                    </div>
+                    <h3 class="post-heading"><a href="#">Is your proposal right for you?</a></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="section-heading">
+              <h2 class="text-black">Academia</h2>
+              <a href="#">View All Videos</a>
+            </div>
+            <!-- <a href="https://vimeo.com/45830194" class="video-1 mb-4" data-fancybox="" data-ratio="2"> -->
+              <a href="#" class="video-1 mb-4" data-fancybox="" data-ratio="2">
+              <span class="play">
+                <span class="icon-play"></span>
+              </span>
+              <img src="images/course_5.jpg" alt="Image" class="img-fluid">
+            </a>
+            <a href="#" class="video-1 mb-4" data-fancybox="" data-ratio="2">
+                <span class="play">
+                  <span class="icon-play"></span>
+                </span>
+                <img src="images/course_5.jpg" alt="Image" class="img-fluid">
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section ftco-subscribe-1" style="background-image: url('images/bg_1.jpg')">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2>Subscribe to us!</h2>
+            <p>We shall keep you in touch with the latest news and updates.</p>
+          </div>
+          <div class="col-lg-5">
+            <form action="" class="d-flex">
+              <input type="text" class="rounded form-control mr-2 py-3" placeholder="Enter your email">
+              <button class="btn btn-primary rounded py-3 px-4" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <p class="mb-4"><img src="images/treehouselogocroppedtrans.png" alt="Image" class="img-fluid"></p>
+            <p>Your Academic writing partner for success!</p>  
+            <p><a href="#">Learn More</a></p>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="footer-heading"><span>Our Campus</span></h3>
+            <ul class="list-unstyled">
+                <li><a href="#">Academic</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Our Blog</a></li>
+                <li><a href="#">Our Leadership</a></li>
+                <li><a href="#">Careers</a></li>
+               
+            </ul>
+          </div>
+          <div class="col-lg-3">
+              <h3 class="footer-heading"><span>Our Services</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Academic Writing</a></li>
+                  <li><a href="#">CV Writing and Editing</a></li>
+                  <li><a href="#">Science &amp; Engineering</a></li>
+                  <li><a href="#">Arts &amp; Humanities</a></li>
+                  <li><a href="#">Economics &amp; Finance</a></li>
+                  <li><a href="#">Business Administration</a></li>
+                  <li><a href="#">Computer Science</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+              <h3 class="footer-heading"><span>Contact</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Support Community</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Share Your Story</a></li>
+                  <li><a href="#">Our Supporters</a></li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <p>
+                    Copyright Academic TreeHouse &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+
+
+
+
+  <script src="js/main.js"></script>
 
 </body>
+
 </html>

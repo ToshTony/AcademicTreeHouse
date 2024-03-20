@@ -842,6 +842,23 @@ h1, h2, h3, h4, h5,
 .owl-slide .owl-nav {
   display: none; }
 
+
+  /* new hover effect */
+
+  .feature-1.service_div:hover {
+    /* Add your hover styles here */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    background-color: #6aa3428a;
+  }
+
+  /* Optional: Add transition for smooth effect */
+  .feature-1.service_div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+
+
 .feature-1 .icon-wrapper, .person .icon-wrapper {
   position: relative;
   width: 96px;

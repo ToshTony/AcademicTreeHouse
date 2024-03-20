@@ -5,7 +5,12 @@ A welcoming landing page introducing the services.
 Hero section with a captivating image and a clear call-to-action (CTA) button.
 Brief overview of services offered.
 Testimonials or reviews section.
-Services:
+
+
+
+Services: to be added: Speech writing, Web development, App Development, proofreading and editing, 
+Report writing, Presentations(powerpoint,excel), Graphic designing, 
+
 
 Separate pages for "Academic Writing" and "CV Writing."
 Detailed descriptions of each service.
@@ -40,9 +45,10 @@ Links to social media profiles.
 
 Homepage
 About
-services
-blog
+services --- individual service pages to use admissions.html
+blog ----iyo page ya courses ni blogs inaingia ..then course-single ni blog yenyewe
 contact
+news.... news-single page for individual news, then curate a page for listing all news 
 
 
 chmod u+rw index.html
